@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:molly="http://www.molly.com/schema/molly"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.molly.com/schema/molly http://www.molly.com/schema/molly.xsd">
+
+<!--        <bean id="student" class="endorphin.beans.Student"/>-->
+        <molly:user id="1" username="张三" email="12@q.com" age="11"/>
+        <molly:city id="2" cityName="成都" province="四川" type="0"/>
+
+</beans>
