@@ -1,5 +1,6 @@
 package endorphin;
 
+import endorphin.context.MyClassPathXmlApplicationContext;
 import endorphin.selfEditor.beans.Person;
 import endorphin.selftag.beans.City;
 import endorphin.selftag.beans.User;
@@ -17,7 +18,9 @@ public class TestSpring {
 //        System.out.println(applicationContext.getBean(City.class));;
 //        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext1.xml");
 //        System.out.println(applicationContext.getBean(Person.class));;
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext2.xml");
-        System.out.println(applicationContext.getBean(Person.class));;
+//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext2.xml");
+//        System.out.println(applicationContext.getBean(Person.class));;
+//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext3.xml");
+        ApplicationContext applicationContext = new MyClassPathXmlApplicationContext("applicationContext3.xml");
     }
 }

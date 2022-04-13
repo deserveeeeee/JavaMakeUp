@@ -1,5 +1,7 @@
 package endorphin.context;
 
+import endorphin.selfBfpp.MyBeanFactoryPostProcessor;
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -11,7 +13,7 @@ public class MyClassPathXmlApplicationContext extends ClassPathXmlApplicationCon
      */
     @Override
     protected void initPropertySources() {
-        getEnvironment().setRequiredProperties("abc");
+//        getEnvironment().setRequiredProperties("abc");
         super.initPropertySources();
     }
 
@@ -21,8 +23,16 @@ public class MyClassPathXmlApplicationContext extends ClassPathXmlApplicationCon
      */
     @Override
     protected void customizeBeanFactory(DefaultListableBeanFactory beanFactory) {
-        super.setAllowBeanDefinitionOverriding(false);
-        super.setAllowCircularReferences(false);
+//        super.setAllowBeanDefinitionOverriding(false);
+//        super.setAllowCircularReferences(false);
+        this.addBeanFactoryPostProcessor(new MyBeanFactoryPostProcessor());
         super.customizeBeanFactory(beanFactory);
+    }
+
+    public MyClassPathXmlApplicationContext() {
+    }
+
+    public MyClassPathXmlApplicationContext(String configLocation) throws BeansException {
+        super(configLocation);
     }
 }
