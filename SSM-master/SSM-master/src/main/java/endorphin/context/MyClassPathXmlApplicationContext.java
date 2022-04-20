@@ -2,6 +2,7 @@ package endorphin.context;
 
 import endorphin.selfBfpp.MyBeanFactoryPostProcessor;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -34,5 +35,11 @@ public class MyClassPathXmlApplicationContext extends ClassPathXmlApplicationCon
 
     public MyClassPathXmlApplicationContext(String configLocation) throws BeansException {
         super(configLocation);
+    }
+
+    @Override
+    protected void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) {
+        System.out.println("主要是拿到了beanFactory可以做一些操作");
+        super.postProcessBeanFactory(beanFactory);
     }
 }
