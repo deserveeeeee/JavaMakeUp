@@ -21,6 +21,8 @@ public class TestSpring {
 //        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext2.xml");
 //        System.out.println(applicationContext.getBean(Person.class));;
 //        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext3.xml");
-        ApplicationContext applicationContext = new MyClassPathXmlApplicationContext("applicationContext3.xml");
+//        ApplicationContext applicationContext = new MyClassPathXmlApplicationContext("applicationContext3.xml");
+//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext4.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext5.xml");
     }
 }
